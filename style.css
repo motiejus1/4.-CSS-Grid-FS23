@@ -1,0 +1,98 @@
+
+
+html {
+    /* 1rem = 18px */
+    /* 1rem = 1% ekrano aukscio *
+    /* 1rem = 1% ekrano plocio vw */
+    /* isivedam kintamaji */
+    font-size: 1vw;
+}
+
+/* kad jeigu ekrano plotis tampa 1280px, html font-size: 12px */
+/* 1rem = 14px */
+/* 80rem = 1120px */
+p {
+    /* 1px */
+    /* procentais ar vw ar vh mes tiesiogiai neuzdidenajm */
+    font-size:1rem; 
+    /* >1500px - 18px */
+    /*  <1280px - 22px */
+    /* ... */
+}
+
+.staciakampis {
+    /* plotis pikseliais tik ipatingai smulkiems dizaino elementams */
+    /* 50x50px */
+    /* 1920 pikseliu ekranas 100% */
+    /* 1500 pikseliu x %  */
+    /*  */
+    width: 78%;
+    height: 100px;
+    background-color: red;
+}
+
+.staciakampis1 {
+    width:50%;
+    height: 200px;
+    background-color: green;
+}
+
+.staciakampis2 {
+    /* staciakampis1 plocio */
+    /* 25% ekrano */
+    width:50%; 
+    height:200px;
+    background-color: yellow;
+}
+
+.staciakampis3 {
+    width: 80rem;
+    height: 10rem;
+    background-color: yellow;
+    /* px x 180px */
+}
+
+.staciakampis4 {
+    /* plotis procentais nuo tevinio elemento */
+    width:50%;
+    height: 200px;
+    background-color: green;
+}
+/* aukstis nenustatinejamas procentais. Dezutese yra turinys. Nuo turinio priklauso elemento aukstis
+. Aukstis priklauso nuo turinio, narsykle neturi atskaitos tasko pagal ka skaiciuoti auksti procentais.
+vh - viewport height
+*/
+.staciakampis5 {
+    /* viewport width - ekrano plotis 100% */
+    width:50vh; 
+    height:50vw;
+    background-color: yellow;
+}
+
+
+@media screen and (max-width:1500px) {
+    /* html {
+        font-size:24px;
+    } */
+}
+
+/* pritaikyk dizaina jeigu ekrano dydis yra mazesnis nei 1280px */
+@media screen and (max-width:1280px) {
+    .staciakampis5 {
+        background-color: red;
+    }
+    /* html {
+        font-size:36px;
+    } */
+}
+/* pritaikyk dizaina jeigu ekrano dydis yra mazesnis nei 720px */
+
+@media screen and (max-width:720px) {
+    .staciakampis5 {
+        background-color: green;
+    }
+    /* html {
+        font-size:42px;
+    } */
+}
+
